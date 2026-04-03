@@ -76,124 +76,31 @@
         <div class="container">
 
             <div class="text-center mb-5">
-
                 <h2>Our Services</h2>
-
                 <p class="section-subtitle">
                     We provide complete web development solutions
                 </p>
-
             </div>
 
             <div class="row">
 
-                <div class="col-md-4 mb-4">
+                @foreach ($services as $service)
+                    <div class="col-md-4 mb-4">
 
-                    <div class="card-modern text-center">
+                        <div class="card-modern text-center">
 
-                        <i class="bi bi-code-slash service-icon"></i>
+                            <i class="{{ $service->icon }} service-icon"></i>
 
-                        <h5>Website Development</h5>
+                            <h5>{{ $service->title }}</h5>
 
-                        <p>
-                            Modern responsive websites built using latest
-                            technologies for businesses and startups.
-                        </p>
+                            <p>
+                                {{ $service->description }}
+                            </p>
 
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="card-modern text-center">
-
-                        <i class="bi bi-laptop service-icon"></i>
-
-                        <h5>Web Applications</h5>
-
-                        <p>
-                            Custom web applications built using Laravel,
-                            PHP and modern frameworks.
-                        </p>
+                        </div>
 
                     </div>
-
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="card-modern text-center">
-
-                        <i class="bi bi-person-badge service-icon"></i>
-
-                        <h5>Portfolio Websites</h5>
-
-                        <p>
-                            Professional portfolio websites for students
-                            and professionals.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="card-modern text-center">
-
-                        <i class="bi bi-speedometer2 service-icon"></i>
-
-                        <h5>Performance Optimization</h5>
-
-                        <p>
-                            Improve speed and performance of your existing
-                            website or web application.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="card-modern text-center">
-
-                        <i class="bi bi-gear service-icon"></i>
-
-                        <h5>Website Maintenance</h5>
-
-                        <p>
-                            Ongoing maintenance, updates and support
-                            for your website.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="card-modern text-center">
-
-                        <i class="bi bi-cloud service-icon"></i>
-
-                        <h5>Deployment & Hosting</h5>
-
-                        <p>
-                            Deploy your project and setup hosting
-                            with domain and SSL.
-                        </p>
-
-                    </div>
-
-                </div>
-
+                @endforeach
 
             </div>
 
