@@ -34,6 +34,13 @@
             </a>
         </li>
 
+        <li>
+            <a href="/admin/settings">
+                <i class="bi bi-gear"></i>
+                Settings
+            </a>
+        </li>
+
     </ul>
 
 </div>
