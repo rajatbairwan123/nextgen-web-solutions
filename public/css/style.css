@@ -30,13 +30,50 @@ h2 {
 }
 /* Navbar Section */
 
-.navbar {
+.custom-navbar {
     background: #fff;
-    border-bottom: 1px solid #eee;
+    padding: 18px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
 }
 
-.navbar-brand span {
+.logo-text {
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--text-dark);
+}
+
+.logo-highlight {
+    font-weight: 700;
+    font-size: 22px;
     color: var(--primary-color);
+    margin-left: 5px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-btn {
+    padding: 8px 18px;
+    border-radius: 8px;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.navbar-scrolled {
+    padding: 12px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
 }
 
 /* Hero section */
@@ -215,9 +252,22 @@ h2 {
 /* Footer Section */
 
 .footer-section {
-    background: #111;
+    background: #0f172a;
     color: #fff;
-    padding: 60px 0;
+    padding: 70px 0 20px;
+}
+
+.footer-logo {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--primary-color);
+}
+
+.footer-text {
+    color: #cbd5e1;
 }
 
 .footer-links {
@@ -230,10 +280,33 @@ h2 {
 }
 
 .footer-links a {
-    color: #ccc;
+    color: #cbd5e1;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .footer-links a:hover {
     color: #fff;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #cbd5e1;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color);
+}
+
+.footer-divider {
+    margin-top: 20px;
+    border-color: #334155;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    color: #94a3b8;
 }
