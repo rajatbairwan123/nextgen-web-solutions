@@ -1,33 +1,239 @@
-.hero-section {
-    padding: 100px 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #7c3aed;
+
+    --accent-color: #06b6d4;
+    --success-color: #22c55e;
+
+    --text-dark: #111827;
+    --text-light: #6b7280;
+
+    --bg-light: #f9fafb;
+    --white: #ffffff;
 }
 
-.hero-section h1 {
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+}
+
+h1 {
     font-size: 42px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+/* Navbar Section */
+
+.navbar {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-brand span {
+    color: var(--primary-color);
+}
+
+/* Hero section */
+
+.gradient-bg {
+    background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+}
+.section-padding {
+    padding: 80px 0;
+}
+
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 44px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.hero-section p {
+.hero-subtitle {
     font-size: 18px;
-    color: #6c757d;
+    opacity: 0.9;
 }
 
-.hero-img {
-    max-height: 350px;
+.hero-image {
+    max-height: 400px;
 }
 
-.service-card {
-    padding: 30px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: 0.3s;
-    height: 100%;
+.hero-stats h4 {
+    font-weight: 700;
 }
 
-.service-card:hover {
+.hero-stats p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.hero-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Service Section */
+.services-section {
+    background: var(--bg-light);
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    margin-top: 10px;
+}
+.service-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card-modern {
+    transition: all 0.3s ease;
+}
+
+.card-modern:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-modern {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* About Section */
+
+.about-section {
+    background: #fff;
+}
+
+.about-image {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Portfolio Section */
+
+.portfolio-section {
+    background: var(--bg-light);
+}
+
+.portfolio-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    padding: 20px;
+}
+
+/* CTA Section */
+
+.cta-section {
+    color: #fff;
+}
+
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.cta-subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+
+.contact-section {
+    background: #fff;
+}
+
+.contact-info {
+    padding: 30px;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+/* Footer Section */
+
+.footer-section {
+    background: #111;
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #fff;
 }
