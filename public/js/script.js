@@ -12,3 +12,11 @@ $("a").on("click", function (e) {
         );
     }
 });
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+        $(".custom-navbar").addClass("navbar-scrolled");
+    } else {
+        $(".custom-navbar").removeClass("navbar-scrolled");
+    }
+});
