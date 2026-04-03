@@ -174,81 +174,42 @@
         <div class="container">
 
             <div class="text-center mb-5">
-
                 <h2>Our Portfolio</h2>
-
                 <p class="section-subtitle">
                     Some of our recent projects and work
                 </p>
-
             </div>
 
             <div class="row">
 
-                <!-- Project 1 -->
+                @foreach ($portfolios as $portfolio)
+                    <div class="col-md-4 mb-4">
 
-                <div class="col-md-4 mb-4">
+                        <div class="portfolio-card">
 
-                    <div class="portfolio-card">
+                            <img src="{{ asset('storage/' . $portfolio->image) }}" class="img-fluid">
 
-                        <img src="{{ asset('images/portfolio/travel.png') }}" class="img-fluid">
+                            <div class="portfolio-content">
 
-                        <div class="portfolio-content">
+                                <h5>{{ $portfolio->title }}</h5>
 
-                            <h5>Business Website</h5>
+                                <p>{{ $portfolio->description }}</p>
 
-                            <p>Modern responsive business website</p>
+                                @if ($portfolio->project_url)
+                                    <a href="{{ $portfolio->project_url }}" target="_blank"
+                                        class="btn btn-sm btn-outline-primary mt-2">
+                                        View Project
+                                    </a>
+                                @endif
 
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Project 2 -->
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="portfolio-card">
-
-                        <img src="{{ asset('images/portfolio/Portfolio.png') }}" class="img-fluid">
-
-                        <div class="portfolio-content">
-
-                            <h5>Portfolio Website</h5>
-
-                            <p>Professional portfolio for developer</p>
+                            </div>
 
                         </div>
 
                     </div>
-
-                </div>
-
-
-                <!-- Project 3 -->
-
-                <div class="col-md-4 mb-4">
-
-                    <div class="portfolio-card">
-
-                        <img src="{{ asset('images/portfolio/groco-ecom.png') }}" class="img-fluid">
-
-                        <div class="portfolio-content">
-
-                            <h5>Web Application</h5>
-
-                            <p>Custom Laravel web application</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                @endforeach
 
             </div>
-
 
             <div class="text-center mt-4">
 
